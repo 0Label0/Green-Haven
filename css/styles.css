@@ -1,0 +1,395 @@
+/* Globales */
+
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mark Script'
+}
+
+
+/* CABECERA */
+
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+header{
+    background: 
+    url("../img/medio_ambiente.jpg")
+    no-repeat
+    center center;
+    background-color: #8fd177;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* Fuente de letra */
+@font-face {
+    font-family: "Marck Script";
+    src: url("../font/MarckScript-Regular.ttf");
+}
+
+header h1{
+    position: relative;
+    top: 18%;
+    text-align: left;
+    font-family: "Marck Script";
+    color: #ededed;
+    font-size: 50px;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+
+/* LINKS LOCALES*/
+
+nav {
+    width: 100%;
+    top: 0;
+    position: sticky;
+    z-index: 100;
+}
+
+nav div {
+    height: 4em;
+    background-image: linear-gradient(to right, #000, #101010, #222);
+    display: flex;
+
+}
+
+div .link:first-child{
+    width: 10em;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    padding-left: 1em;
+    padding-right: 1em; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: 0.5s all;
+    padding-left: 1.5em;
+    padding-right: 1.5em ;
+}
+
+nav div a:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: #000;
+}
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: #000;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.footer_1 img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+.footer_1 span {
+    font-size: 18px;
+    line-height: 40px;
+    margin-left: 50px;
+}
+
+.footer_2 {
+    margin-left: 9em;
+}
+
+.footer_2 img {
+    width: 50px; 
+    height: 50px;
+    opacity: 0.8;
+    margin-right: .2em;
+}
+
+footer div img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Derechos de autor */
+#icon_derechos_autor{
+    position: relative;
+    top: 9px;
+    width: 30px; 
+    height: 30px; 
+    margin-right: 5px; 
+    opacity: 0.7;
+}
+#derechos_autor{
+    font-size: 20px;
+    opacity: 0.7;
+
+}
+
+
+
+
+
+/* Descripción de la empresa */
+
+.descripcion_empresa{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    width: 100%;
+    height: auto;
+    background-color: #f9f9f9f9;
+}
+.descripcion_empresa div{
+    margin: 20px;
+    padding: 20px;
+}
+
+.descripcion_empresa div h3{
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.descripcion_empresa div p{
+    line-height: 30px;
+    font-size: 20px;
+}
+/* MAIN index */ 
+
+/* Sección de productos más vendidos */
+
+h2{
+    margin-bottom: 30px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 40px; 
+}
+h4{
+    font-size: large;
+    margin-top: 50px;
+    text-align: center;
+    color: rgb(255, 143, 15);
+}
+
+.productos_main {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 400px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8em;
+}
+
+.productos_main img{
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    border-radius: 40px;
+    transition: transform 0.3s ease;
+}
+
+.productos_main img:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+
+/* Auto-publicidad y asociados */
+
+.auto-publicidad_asociados div{
+    height: auto;
+    padding: 5em;
+}
+.auto-publicidad_asociados{
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+.auto-publicidad_asociados h3{
+    font-size: 50px;
+}
+small{
+    font-size: 15px;
+    color: rgb(232, 91, 4);
+    font-weight: bold;
+}
+.auto-publicidad_asociados div p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.asociados{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.asociados img{
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    margin-right: 50px;
+}
+
+.asociados img:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+/* Adaptación a movile */
+@media screen and (max-width: 800px) {
+
+    /* enlaces */
+    .link, .this_link {
+        padding: 10px; 
+        font-size: 16px;
+        width: auto;
+    }
+
+    /* productos */
+    .productos_main {
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 200px 200px 200px 200px;
+    }
+
+    .productos_main img{
+        width: 200px;
+        height: 200px;
+
+    }
+
+    /* auto-publicidad*/
+    .auto-publicidad_asociados{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .auto-publicidad_asociados h3{
+        font-size: 30px;
+    }
+
+    .auto-publicidad_asociados div p {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .asociados img{
+        width: 120px;
+        height: 120px;
+        margin: 0px;
+    }
+
+    /* Descripción de empresa */ 
+    .descripcion_empresa{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Pié de página footer*/
+    footer {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    /* Ajustes específicos para los íconos de derechos de autor */
+    #icon_derechos_autor {
+        top: 5px;
+        margin-top: 10px; 
+    }
+
+    #derechos_autor {
+        text-align: center; 
+        margin-top: 5px;
+    }
+
+
+
+}
+/* Pantallas Medianas */ 
+@media (min-width: 800px) and (max-width: 1450px) {
+        /* productos */
+        .productos_main {
+            grid-template-columns: 280px 280px 280px;
+            grid-template-rows: 280px 280px 280px
+        }
+
+        .productos_main img{
+            width: 280px;
+            height: 280px;
+    
+        }
+        .auto-publicidad_asociados h3{
+            font-size: 35px;
+        }
+    
+        .auto-publicidad_asociados div p {
+            font-size: 22px;
+            line-height: 26px;
+        }
+    
+
+        .auto-publicidad_asociados{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .asociados img{
+            width: 160px;
+            height: 160px;
+            margin: 0px;
+        }
+}
+@media screen and (max-width: 500px) {
+    body, main {
+        width: 100vw;
+        margin: 0; 
+        overflow-x: hidden; 
+    }
+    /* enlaces */
+    .link, .this_link {
+        font-size: 13px;
+        width: auto;
+    }
+    nav div{
+        height: 45px;
+    }
+    .auto-publicidad_asociados{
+        display: flex;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .footer_1 span{
+        font-size: 15px;
+        line-height: 30px;    
+    }
+    .asociados img{
+        width: 100px;
+        height: 100px;
+        margin: 0px;
+    }
+
+}

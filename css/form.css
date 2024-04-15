@@ -1,0 +1,151 @@
+
+
+main{
+    margin-top: 0px;
+    background-color: #e5e5f7;
+    opacity: 0.9;
+    background-image:  radial-gradient(#91b989 1px, transparent 1px), radial-gradient(#99ca8f 1px, #f3ffe9 1px);
+    background-size: 40px 40px;
+    background-position: 0 0,20px 20px;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* FORMULARIO */
+.form{
+    background-color: #fff;
+    margin: 10rem auto; 
+    width: 90%;
+    max-width: 400px;
+    max-height: 700px;
+    height: auto;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 /30%);
+    text-align: center;
+
+}
+.form_title{
+    font-size: 3em;
+    margin-bottom: .2em;
+    line-height: 0;
+}
+
+.form_container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+.form_group{
+    position: relative;
+    --color: #5757577e;
+}
+.form_input{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border:none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+}
+
+.form_group:hover{
+    opacity: .7;
+}
+
+/* Animación de el label: 
+    cuando el input está seleccionado el label
+    se mueve arriba y se hace más pequeño */
+.form_input:focus + .form_label, 
+.form_input:not(:placeholder-shown) + .form_label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin:left top;
+    color: #1c6200;
+}
+
+/* Las etiquetas */
+.form_label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform 0.5s, color .3s;
+}
+
+/* El botón de enviar */
+.form_submit{
+    background: #1c6200;
+    color: #fff;
+    font-family: 'Roboto', "sans-serif";
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+}
+.form_submit:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+/* La linea que marca el input */
+.form_line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #525252;
+    transform: scale(0);
+    transform-origin: left bottom; 
+    transition: transform 0.4s;
+}
+
+
+
+/* El area de texto */
+textarea{
+    position:inherit;
+    width: 100%;
+    height: 5rem;
+    border-radius: .3rem;
+    border: 1px solid #000;
+    padding: 3px;
+    resize: none;
+}
+textarea:focus{
+    box-shadow: 0 0 5px #1c6200, 2px 2px 3px #3866f2;
+    border-color: #1c6200;
+    box-shadow: 0 0 5px #1c6200;
+    outline: none; 
+}
+
+/* La checkbox */
+.checkbox{
+    margin-right:9px;
+    cursor: pointer;
+}
+.checkbox:hover{
+    border: 1px solid rgb(0, 102, 0);
+    box-shadow: 0 0 5px #1c6200;
+}
+
+/* Políticas de privacidad*/
+#politicas_privacidad{
+    font-size: 14px;
+}
+
+
+
+/* Pequeña adaptación a movil*/
+@media (max-width: 700px) {
+    .form_title{
+        font-size: 1.8rem;
+    }
+
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+    <!-- CABECERA -->
+    <header>
+        <h1>Green Haven</h1>
+    </header>
+    <!-- LINKS LOCALES-->
+    <nav>
+        <div>
+            <a class="link" href="../index.html" title="Ir a la página de inicio">Inicio</a>
+            <a class="link" href="productos.html" title="Ver nuestros productos">Productos</a>
+            <a class="link" href="contacto.html" title="Contactarnos">Contacto</a>
+            <a class="link" href="#" title="Obtener un presupuesto">Presupuesto</a>
+        </div>
+    </nav>
+    <main>
+        <form class="form">
+            <h2 class="form_title">Presupuesto</h2>
+        
+            <div class="form_container">
+                <div class="form_group">
+                    <input type="text" id="name" class="form_input" placeholder=" " pattern="[a-zA-ZáéíóúÁÉÍÓÚ\s]+" required>
+                    <label for="name" class="form_label">Nombre:</label>
+                    <span class="form_line"></span>
+                </div>
+                <div class="form_group">
+                    <input type="email" id="e-mail" class="form_input" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    <label for="e-mail" class="form_label">E-mail:</label>
+                    <span class="form_line"></span>
+                </div>
+                <div class="form_group">
+                    <input type="tel" id="tel" class="form_input" placeholder=" " pattern="[0-9]{4}-[0-9]{4}-[0-9]{5}" required title="El formato es 0000-0000-00000">
+                    <label for="tel" class="form_label">Teléfono:</label>
+                    <span class="form_line"></span>
+                </div>
+              
+                <div>
+                    <textarea placeholder=""></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" class="checkbox" required><label id="politicas_privacidad">Acepta las políticas de privacidad para continuar</label> 
+                </div>  
+                <input type="submit" class="form_submit" value="Enviar">
+                
+            </div>
+        </form>
+    </main>
+
+     <!-- Footer -->
+     <footer>
+        <div class="footer_1">
+            <img alt="icono_télefono" src="../img/icon_telefono.jpg" width="100" height="100"><span>777 22 44 77 88</span>
+            <br>
+            <img alt="icono del google maps" src="../img/Maps.jpg" width="100" height="100"><span>C. de Montuiri, 18, San Francesc de s'Estany</span>
+        </div>
+        <div>
+            <img alt="icono derechos de autor" id="icon_derechos_autor" src="../img/icon_derechos_autor.png" width="100" height="100"><span id="derechos_autor">::Derechos de autor reservados::</span>
+        </div>
+        <div class="footer_2">
+            <a title="icono youtube" target="_blank" href="https://www.youtube.com"><img alt="icon_youtube" src="../img/icon_youtube.jpg"  width="100" height="100"></a>
+            <a title="icono instagram" target="_blank" href="https://www.instagram.com"><img alt="icon_instagram" src="../img/icon_insta.jpg" width="100" height="100"></a>
+            <a title="icono facebook" target="_blank" href="https://www.facebook.com"><img alt="icon_facebock" src="../img/icon_facebock.jpg" width="100" height="100"></a>
+        </div>
+    </footer>
+      
+</body>
+</html>
