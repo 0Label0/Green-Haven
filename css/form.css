@@ -17,7 +17,6 @@ main{
     margin: 10rem auto; 
     width: 90%;
     max-width: 400px;
-    max-height: 700px;
     height: auto;
     padding: 4.5em 3em;
     border-radius: 10px;
@@ -50,10 +49,19 @@ main{
     border:none;
     outline: none;
     border-bottom: 1px solid var(--color);
+    transition: background .5s;
 }
 
 .form_group:hover{
     opacity: .7;
+}
+#message-error {
+    color: red;
+    transition: all .5s;
+}
+
+.lost-password a {
+    text-decoration: none;
 }
 
 /* Animación de el label: 
@@ -138,6 +146,11 @@ textarea:focus{
 /* Políticas de privacidad*/
 #politicas_privacidad{
     font-size: 14px;
+}
+
+.error_validation{
+    background: rgba(255, 88, 88, 0.832);
+    transition: background .5s;
 }
 
 

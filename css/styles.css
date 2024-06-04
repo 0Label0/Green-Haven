@@ -1,5 +1,4 @@
 /* Globales */
-
 *::after,
 *::before,
 * {
@@ -12,7 +11,6 @@
 
 /* CABECERA */
 
-@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 
@@ -60,6 +58,8 @@ nav div {
     height: 4em;
     background-image: linear-gradient(to right, #000, #101010, #222);
     display: flex;
+    transform: translateY(0);
+    transition: transform .5s;
 
 }
 
@@ -72,6 +72,7 @@ div .link:first-child{
     text-decoration: none;
     padding-left: 1em;
     padding-right: 1em; 
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,6 +80,16 @@ div .link:first-child{
     transition: 0.5s all;
     padding-left: 1.5em;
     padding-right: 1.5em ;
+
+}
+
+/* Se activa cuando el usuario desliza hacia abajo */
+.hidden-menu {
+    position: absolute;
+
+    transform: translateY(-80px);
+    transition: opacity 0.9s ease, transform 0.5s ease; 
+    width: 100%;
 }
 
 nav div a:hover {
@@ -86,12 +97,7 @@ nav div a:hover {
     color: #000;
 }
 
-
-
-
-
 /* FOOTER */
-
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -148,8 +154,68 @@ footer div img:hover {
 }
 
 
+span svg {
+    display: none;
+}
 
+/* carrousel */
+.slider-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-container {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.slider {
+    overflow: hidden;
+}
+.slider--inner {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    transform: transform .4;
+    transition: all .4s ease;
+
+}
+
+.slider--inner img {
+    width: 50%;
+    height: 50%;
+    transition: all .4s;
+
+}
+.slider--inner img:hover {
+    transform: scale(1.11);
+}
+
+.puntos {
+    margin-top: 50px;
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.punto {
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 10000;
+
+    transition: transform .4s;
+    cursor: pointer;
+}
+
+.punto:hover{
+    transform: scale(1.1);
+}
 
 /* Descripción de la empresa */
 
@@ -192,27 +258,7 @@ h4{
     color: rgb(255, 143, 15);
 }
 
-.productos_main {
-    display: grid;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 400px 400px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8em;
-}
 
-.productos_main img{
-    width: 100%;
-    height: 400px;
-    padding: 20px;
-    border-radius: 40px;
-    transition: transform 0.3s ease;
-}
-
-.productos_main img:hover{
-    cursor: pointer;
-    transform: scale(1.2);
-}
 
 
 
@@ -312,7 +358,7 @@ small{
     /* Pié de página footer*/
     footer {
         flex-direction: column;
-        height: auto; 
+        height: auto;
     }
 
     /* Ajustes específicos para los íconos de derechos de autor */
@@ -322,7 +368,7 @@ small{
     }
 
     #derechos_autor {
-        text-align: center; 
+        text-align: center;
         margin-top: 5px;
     }
 
@@ -330,62 +376,167 @@ small{
 
 }
 /* Pantallas Medianas */ 
-@media (min-width: 800px) and (max-width: 1450px) {
-        /* productos */
-        .productos_main {
-            grid-template-columns: 280px 280px 280px;
-            grid-template-rows: 280px 280px 280px
-        }
+@media (min-width: 800px) and (max-width: 1600px) {
+    /* productos */
+    .productos_main {
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 200px 200px 200px 200px;
+        gap: 70px;
+        padding-top: 40px;
+    }
+ 
+    .auto-publicidad_asociados h3{
+        font-size: 35px;
+    }
 
-        .productos_main img{
-            width: 280px;
-            height: 280px;
-    
-        }
-        .auto-publicidad_asociados h3{
-            font-size: 35px;
-        }
-    
-        .auto-publicidad_asociados div p {
-            font-size: 22px;
-            line-height: 26px;
-        }
-    
+    .auto-publicidad_asociados div p {
+        font-size: 22px;
+        line-height: 26px;
+    }
 
-        .auto-publicidad_asociados{
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .asociados img{
-            width: 160px;
-            height: 160px;
-            margin: 0px;
-        }
+    .auto-publicidad_asociados{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .asociados img{
+        width: 160px;
+        height: 160px;
+        margin: 0px;
+    }
+
 }
+
 @media screen and (max-width: 500px) {
     body, main {
         width: 100vw;
-        margin: 0; 
+        margin: 0;
         overflow-x: hidden; 
     }
+
     /* enlaces */
-    .link, .this_link {
-        font-size: 13px;
-        width: auto;
-    }
-    nav div{
-        height: 45px;
-    }
-    .auto-publicidad_asociados{
-        display: flex;
+    .link {
+        font-size: .9em;
         width: 100%;
-        margin: 0px;
+    }
+
+    .link:hover {
+        background-color: #101010;
+    }
+
+    div .link:first-child{
+        width: 100%;
+    }
+
+    nav div  {
+        position: fixed;
+        display: flex;
+        top: 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateY(-300px);
+        transition: opacity .5s ease, transform .5s ease;
+        opacity: 0;
+    }
+
+    .no-hidden {
+        display: flex;
+        top: 40px;
+
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+
+        transition: transform 0.8s ease, opacity 0.8s ease;
+        transform: translateY(0);
+        opacity: 1;
+        
+    }
+
+    @keyframes rotateOnce {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+        
+    }
+
+    @keyframes rotateOnce2 {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+
+    }
+
+    .icon-transition2 {
+        animation: rotateOnce2 .5s;
+    }
+    .icon-transition {
+        animation: rotateOnce .5s;
+    }
+
+
+    nav {
+        position: fixed;
+        opacity: 1;
+
+        transform: translateY(0);
+        transition: opacity 0.3s ease;
+    }
+    
+    /* Mientras no se haga click en el menú*/
+    .hidden-menu {
+        position: fixed;
+        opacity: 0;
+
+        transform: translateY(-200px);
+        transition: opacity 0.9s ease, transform 0.5s ease; 
+    }
+
+    /* Cuando se haga scroll hacia abajo: */
+    .hidden-icon {
+        position: fixed;
+        
+        transform: translateY(-50px);
+        transition: all .5s ease;
+    }
+
+    span svg {
+        transform: translateY(0);
+        transition: all .5s ease;
+        
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+  
+    nav div a:hover {
+        background-color: transparent;
+        color: #e0e0e0;
+    }
+    
+    .auto-publicidad_asociados div{
+        margin: 10px;
         padding: 0px;
     }
+
     .footer_1 span{
         font-size: 15px;
         line-height: 30px;    
     }
+
     .asociados img{
         width: 100px;
         height: 100px;

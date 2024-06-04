@@ -88,6 +88,7 @@ main{
     cursor: pointer;
     border-radius: 3px;
     font-size: 1.1em;
+    transition: background .3s;
 }
 
 /* Precio */
@@ -96,6 +97,28 @@ main{
     font-size: 1.5em;
 }
 
+.container_icon {
+    position: relative;
+}
+
+.count-products {
+    position: absolute;
+    top: 55%;
+    right: 0;
+
+    background-color: #092b00;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    font-size: .9rem;
+    
+}
 
 
 /* Pantallas medianas*/
@@ -155,13 +178,6 @@ main{
         height: 350px;
     }
 }
-
-
-
-
-
-
-
 
 
 @media screen and (max-width: 720px) {
