@@ -13,9 +13,7 @@ userName.focus();
 
 function visualError(user, errorMessage) {
 
-    // Vuelve a seleccionar el campo
     user.select();
-
     // Lanza el mensaje de error
     messageError.textContent = errorMessage;
 
@@ -88,20 +86,17 @@ function validate() {
 
 
 submitButton.onclick = (e) => {
-
-    // Se previene que envíe al usuario a la página a la que se envían los datos
     e.preventDefault();
 
-    // Si validate() es true lanza un alert avisando de que el formulario se ha enviado correctamente
     if (validate()) {
 
         alert('Formulario correcto');
-
+        
         messageError = '';
 
         return true;
-        
-    }else { // Cuando no es correcto lanza false y ya
+
+    }else {
         return false;
     }
 }
