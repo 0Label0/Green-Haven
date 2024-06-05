@@ -83,14 +83,7 @@ div .link:first-child{
 
 }
 
-/* Se activa cuando el usuario desliza hacia abajo */
-.hidden-menu {
-    position: absolute;
 
-    transform: translateY(-80px);
-    transition: opacity 0.9s ease, transform 0.5s ease; 
-    width: 100%;
-}
 
 nav div a:hover {
     background-color: hsl(0, 0%, 100%);
@@ -541,6 +534,15 @@ small{
         width: 100px;
         height: 100px;
         margin: 0px;
+    }
+    /* Se activa cuando el usuario desliza hacia abajo
+    esconde el menú para mejorar la experiencia de usuario */
+    .hidden-menu {
+        position: absolute;
+
+        transform: translateY(-80px);
+        transition: opacity 0.9s ease, transform 0.5s ease; 
+        width: 100%;
     }
 
 }

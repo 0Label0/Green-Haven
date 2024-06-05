@@ -89,7 +89,7 @@ function validate() {
 
 submitButton.onclick = (e) => {
 
-    // Se previene que envíe al usuario a la página a la que se envían los datos (creo)
+    // Se previene que envíe al usuario a la página a la que se envían los datos
     e.preventDefault();
 
     // Si validate() es true lanza un alert avisando de que el formulario se ha enviado correctamente
