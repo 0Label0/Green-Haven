@@ -36,8 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }else {
         foreach ($error as $errors) {
             echo "<p>$error</p>";
-
-
         }
     }
 
