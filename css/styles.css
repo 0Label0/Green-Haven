@@ -60,7 +60,7 @@ nav div {
     display: flex;
     transform: translateY(0);
     transition: transform .5s;
-
+    
 }
 
 div .link:first-child{

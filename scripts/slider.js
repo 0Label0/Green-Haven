@@ -1,6 +1,4 @@
-
-
-let sliderInner = document.querySelector('.slider--inner');
+const sliderInner = document.querySelector('.slider--inner');
 
 let intervalID = null;
 let translate = 0;
@@ -13,7 +11,7 @@ function startMovingLeft(){
 
         intervalID = setInterval(()=> {
             if (translate < 0){
-                translate += 1;
+                translate += 10;
                 sliderInner.style.transform = `translateX(${translate}%)`;
 
             }
@@ -27,8 +25,8 @@ function startMovingLeft(){
 function startMovingRight() {
 
         intervalID = setInterval(()=>{
-            if (translate >= -150){
-                translate -= 1;
+            if (translate >= -140){
+                translate -= 10;
                 sliderInner.style.transform = `translateX(${translate}%)`;
             }
             console.log(translate);
