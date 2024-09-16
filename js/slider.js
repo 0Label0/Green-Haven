@@ -8,35 +8,27 @@ const btn_l = document.getElementById('btn-l');
 const btn_r = document.getElementById('btn-r');
 
 function startMovingLeft(){
-
-        intervalID = setInterval(()=> {
-            if (translate < 0){
-                translate += 1;
-                sliderInner.style.transform = `translateX(${translate}%)`;
-
-            }
-            console.log(translate);
-            
-        },speed)
-       
-
+    intervalID = setInterval(()=> {
+        if (translate < 0){
+            translate += 1;
+            sliderInner.style.transform = `translateX(${translate}%)`;
+        }
+        console.log(translate);
+        
+    },speed) 
 }
 
 function startMovingRight() {
+    intervalID = setInterval(()=>{
+        if (translate >= -150){
+            translate -= 1;
+            sliderInner.style.transform = `translateX(${translate}%)`;
+        }
+        console.log(translate);
 
-        intervalID = setInterval(()=>{
-            if (translate >= -150){
-                translate -= 1;
-                sliderInner.style.transform = `translateX(${translate}%)`;
-            }
-            console.log(translate);
-            
-        },speed)
-        
-
+    },speed)
 }
   
-
 function stopMoving() { 
     clearInterval(intervalID);
 }

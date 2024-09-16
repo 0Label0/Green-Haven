@@ -5,6 +5,7 @@ const carritos = document.querySelectorAll('.carrito');
 * El contador representa las veces que se han pulsado los botones
 * Lo normal sería que contase los objetos que hay dentro, pero es solo para tener el ejemplo visual
 */
+
 let counter = 1;
 
 // Se itera sobre carritos 
@@ -33,7 +34,6 @@ carritos.forEach((carrito)=> {
             setTimeout(()=> {
 
                 carrito.disabled = false;
-
                 carrito.style.background = '';
                 carrito.style.color = '#fff';
                 carrito.style.transition = 'background .3s, color .3s';
