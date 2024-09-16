@@ -3,13 +3,10 @@ const userMail = form1.mail;
 const userTel = form1.tel;
 const checkbox = form1.checkbox;
 
-const submitButton = document.getElementById('button-submit');
-
 let messageError = document.getElementById('message-error');
 
 // Pone el foco en el nombre al cargar la página
 userName.focus();
-
 
 function visualError(user, errorMessage) {
 
@@ -86,8 +83,7 @@ function validate() {
 }
 
 
-
-submitButton.onclick = (e) => {
+form1.addEventListener('submit', function(e) {
 
     // Se previene que envíe al usuario a la página a la que se envían los datos (creo)
     e.preventDefault();
@@ -98,10 +94,21 @@ submitButton.onclick = (e) => {
         alert('Formulario correcto');
 
         messageError = '';
-
-        return true;
         
-    }else { // Cuando no es correcto lanza false y ya
-        return false;
+        const data = new FormData(this)
+        fetch('../backend/api.js', {
+            method: 'POST',
+            body: data
+        })
+        .then(res => {
+            if(!res.ok) {
+                throw new Error("Error en la respuesta del servidor")
+            }
+            res.json()
+        })
+        .then(data => {
+            console.log('Datos recividos', data)
+        })
+        .catch(err => console.log('Error en el envío del formulario', err))
     }
-}
+}) 
