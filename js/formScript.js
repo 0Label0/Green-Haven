@@ -1,3 +1,5 @@
+const form1 = document.getElementById('form1')
+
 const userName = form1.name;
 const userMail = form1.mail;
 const userTel = form1.tel;
@@ -30,8 +32,8 @@ function visualError(user, errorMessage) {
 function validate() {
 
     // Expresiones regulares, las uso para validar los campos correctamente
-    const regexPhone = /^(?:(?:\+|00)([1-9]\d{0,2}))?[\s.\/-]?\(?(0?\d{1,4})\)?[\s.\/-]?(\d{2,4})[\s.\/-]?(\d{2,4})[\s.\/-]?(\d{2,4})$/;
-    const regexMail = /[a-z0-9._%\+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+    const regexPhone = /^(?:(?:\+|00)([1-9]\d{0,2}))?[\s./-]?\(?(0?\d{1,4})\)?[\s./-]?(\d{2,4})[\s./-]?(\d{2,4})[\s./-]?(\d{2,4})$/;
+    const regexMail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
     const regexName = /^[a-zA-Z ]+$/;
 
     /*

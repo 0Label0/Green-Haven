@@ -1,6 +1,6 @@
 const menu = document.querySelector('nav div');
 const icon = document.querySelector('nav span svg');
-const links = document.querySelectorAll('.link');
+// const links = document.querySelectorAll('.link');
 
 // Sí es false el menú está oculto, si es true el menú está 
 let t = false;

@@ -1,5 +1,3 @@
-
-
 let sliderInner = document.querySelector('.slider--inner');
 
 let intervalID = null;

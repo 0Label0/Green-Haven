@@ -1,4 +1,3 @@
-
 const counterProduct = document.getElementById('counter-products');
 const carritos = document.querySelectorAll('.carrito');
 
